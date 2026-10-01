@@ -1,1 +1,21 @@
-
+#1.Write a program to compute the Covariance, Correlation between a pair of attributes. 
+#Extend the program to compute the Covariance Matrix and Correlation Matrix. 
+import numpy as np
+import pandas as pd
+data = {
+    'X': [15, 20, 30, 40, 55],
+    'Y': [10, 33, 20, 25, 35]
+}
+df = pd.DataFrame(data)
+print("Dataset:")
+print(df)
+cov_xy = np.cov(df['X'], df['Y'])[0, 1]
+print("\nCovariance between X and Y =", cov_xy)
+corr_xy = np.corrcoef(df['X'], df['Y'])[0, 1]
+print("Correlation between X and Y =", corr_xy)
+cov_matrix = df.cov()
+print("\nCovariance Matrix:")
+print(cov_matrix)
+corr_matrix = df.corr()
+print("\nCorrelation Matrix:")
+print(corr_matrix)
