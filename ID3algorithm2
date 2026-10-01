@@ -1,4 +1,4 @@
-#2.Write a program to demonstrate the working of the decision tree based ID3 algorithm. Use 
+#2.  Write a program to demonstrate the working of the decision tree based ID3 algorithm. Use 
 #an appropriate data set for building the decision tree and apply this knowledge to classify a 
 #new sample. 
  
@@ -30,7 +30,7 @@ new_sample = pd.DataFrame({
     'Outlook': ['Sunny'], 
     'Temperature': ['Cool'], 
     'Humidity': ['High'], 
-    'Wind': ['Strong']    }) 
+    'Wind': ['Strong']    })  
 for column in new_sample.columns: 
     encoder = LabelEncoder() 
     encoder.fit(data[column]) 
